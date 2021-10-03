@@ -17,10 +17,18 @@ THe only real stumbling block in this code happens when you are asked to get the
 
 Includes:
 1. PyBank Folder
+
     a. the script named main.py
+    
     b. Resources folder which holds the original file: budget_data.csv
+    
     c. analysis folder which hold the output text file with the results: budget_summary.txt
+    
 2. Pypoll Folder
+
     a. the script named main.py
+    
     b. Resources folder which holds the original file: election_data.csv
+    
     c. analysis folder which hold the output text file with the results: election_summary.txt
+    
