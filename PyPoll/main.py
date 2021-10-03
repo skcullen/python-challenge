@@ -39,7 +39,8 @@ with open(csvpath, 'r') as electiondata:
 
     #put each candidate from candidate list into a loop which sorts them out intotheir own individual list by candidate
     #if you have more or less candidates, you will have to edit the number of elifs, but the pattern is easily repeatable
-    #if changing number of candidates, remeber to add/drop new empty lists at top
+    #you will have to change the number in all sequencial calculations
+    #if changing number of candidates, remember to add/drop new empty lists at top
     for x in range(len(candidatevote)):
         if candidatevote[x-1] == candidatelist[0]:
             canonevote.append(candidatevote[x-1])
@@ -102,3 +103,22 @@ print("-----------------------------")
 #print the winner
 print(f"Winner: {winner}")
 print("-----------------------------")
+
+
+#export the results into a txt file
+#write the path for where we want the results
+output = os.path.join("analysis", "election_summary.txt")
+
+#open file in write mode and fill in the output data
+with open(output, 'w') as f:
+    f.write("Election Results" '\n')
+    f.write("-----------------------------" '\n')
+    f.write(f"Total Votes: {len(voters)}" '\n')
+    f.write("-----------------------------" '\n')
+    f.write(f"{candidatelist[0]}: {canonepercent:.3f}% ({canonecount})"'\n')
+    f.write(f"{candidatelist[1]}: {cantwopercent:.3f}% ({cantwocount})" '\n')
+    f.write(f"{candidatelist[2]}: {canthreepercent:.3f}% ({canthreecount})" '\n')
+    f.write(f"{candidatelist[3]}: {canfourpercent:.3f}% ({canfourcount})" '\n')
+    f.write("-----------------------------" '\n')
+    f.write(f"Winner: {winner}" '\n')
+    f.write("-----------------------------" '\n')

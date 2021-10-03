@@ -64,6 +64,22 @@ print(f"Average Change: ${averagechange:.2f}")
 print(f"Greatest Increase in Profits: {maxmonth} (${maxchange})")
 print(f"Greatest Decrease in Profits: {minmonth} (${minchange})")
 
+#export the results into a txt file
+#write the path for where we want the results
+output = os.path.join("analysis", "budget_summary.txt")
+
+#open file in write mode and fill in the output data
+with open(output, 'w') as f:
+    f.write("Financial Analysis" '\n')
+    f.write("--------------------------------------" '\n')
+    f.write(f"Total Months: {len(months)}" '\n')
+    f.write(f"Total: ${sum(profits)}" '\n')
+    f.write(f"Average Change: ${averagechange:.2f}" '\n')
+    f.write(f"Greatest Increase in Profits: {maxmonth} (${maxchange})" '\n')
+    f.write(f"Greatest Decrease in Profits: {minmonth} (${minchange})" '\n')
+
+    
+
 
 
     
