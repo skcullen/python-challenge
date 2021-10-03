@@ -1,6 +1,6 @@
 # python-challenge
 
-Unit 3: Python HOMEWORK 
+Unit 3: Python Homework 
 
 Included in this repository is my solution for the Unit 3: Python Homework for the Georgia Tech Analytics Bootcamp.
 
